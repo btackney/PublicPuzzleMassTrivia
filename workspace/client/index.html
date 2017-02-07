@@ -1,0 +1,91 @@
+<doctype html>
+  <html lang="en" ng-app>
+
+  <head>
+    <title>PUBICPUZZLE.COM</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:url" content="HTTP://publicpuzzle.com/" />
+    <meta property="og:type" content="Game" />
+    <meta property="og:title" content="Play with the public at publicpuzzle.com" />
+    <meta property="og:description" content="Real people, real time, real game." />
+    <meta property="og:image" content="http://publicpuzzle.com/img/pp.png" />
+
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    
+    <link rel="stylesheet" href="css/hint.css">
+    
+  </head>
+
+  <body>
+        
+   
+    <div id="gameScreen">
+    
+    <div id="c1" style="font:18pt verdana;position:absolute;left:0px;top:0px;background:transparent;color:GOLD;border:0px solid blue;text-align:left;wordWrap:true;"></div> 
+    <div id="c2" style="font:18pt verdana;position:absolute;right:0px;top:0px;background:transparent3;color:GOLD;border:0px solid blue;text-align:right;wordWrap:true;"></div>
+    <div id="c3" style="font:18pt verdana;position:absolute;left:0px;bottom:0px;background:transparent;color:GOLD;border:0px solid blue;text-align:left;wordWrap:true;"></div>
+    <div id="c4" style="font:18pt verdana;position:absolute;right:0px;bottom:0px;background:transparent;color:GOLD;border:0px solid blue;text-align:right;wordWrap:true;"></div>
+     
+    <div id="tq" style="font:18pt verdana;position:absolute;left:10px;top:50px;right:10px;bottom:10px;background:transparent;color:GOLD;border:0px solid blue;text-align:center;wordWrap:true;"></div>  
+
+    <input type="button" id="choice1" style="position:absolute;left:0;top:0;width:100;height:100;background:transparent;color:black;border:0px solid gray;" value="" />
+    <input type="button" id="choice2" style="position:absolute;right:0;width:100;height:100;top:0;background:transparent;color:black;border:0px solid gray;" value="" />
+    <input type="button" id="choice3" style="position:absolute;left:0;bottom:0;width:100;height:100;background:transparent;color:black;border:0px solid gray;" value="" />
+    <input type="button" id="choice4" style="position:absolute;right:0;width:100;bottom:0;height:100;background:transparent;color:black;border:0px solid gray;" value="" />
+    
+    <p HIDDEN id="scoreTL">#</p>
+    <p HIDDEN id="scoreTR">#</p>
+    <p HIDDEN id="scoreBL">#</p>
+    <p HIDDEN id="scoreBR">#</p>
+    
+    <div id="timer"></div>
+    </div>
+    
+    <div id="logonscreen" style="display:none;">
+      
+      <div class="logonlogo"></div>
+         
+      <div id="logonbox"> <br />
+        <p hidden> Welcome ... Please pick and name a click start to begin. </p> <br />
+        <input disabled type="text" name="username" id="username" autofocus /> <br /><br />
+        <div hidden id="randomnick">(Random NickName)</div> 
+        
+        <br />
+        <br />
+        
+      <div id='scrolly' style="color:white;background:black;">
+      </div>
+      
+        <div id="logon">
+          <div hidden id="logonbut" class="logonbut">Play</div> <br />
+          <div hidden id="logonbutquiet" class="logonbut">Play Quietly</div>
+        </div>
+        
+      </div>
+    </div>
+    
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    
+    <script src="./socket.io/socket.io.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.11/pixi.min.js"></script>
+
+    <script src="./js/ion.sound.min.js"></script>
+
+    <script src="./js/base.js"></script>
+    
+    <div hidden id="overlay" style="text-align:center;border:5px solid red;background:white;font:18pt courier;color:black;position:absolute;bottom:100px;left:50px;right:50px;">
+        <p id="data" width="100" height="100"></p>
+    </div>
+    
+    <div hidden id="pauseoverlay" style="text-align:center;border:5px solid red;background:TRANSPARENT;font:18pt courier;color:black;position:absolute;bottom:10px;left:100px;right:100px;height:75px">
+        <p id="data" width="100" height="100">PAUSED</p>
+    </div>    
+    
+  </body>
+
+  </html>

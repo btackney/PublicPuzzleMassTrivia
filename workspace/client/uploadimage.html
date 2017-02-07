@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <script>
+        /*global $*/
+
+        var images = [];
+
+        $(function() {
+            $(":file").change(function() {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = imageIsLoaded;
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+
+        function createImages() {
+
+            var img;
+
+            document.getElementById("placehere").innerHTML = "";
+
+            for (var i = 0; i < images.length; i++) {
+
+                var elem = document.createElement("img");
+                elem.setAttribute("src", images[i]);
+                elem.setAttribute("height", "100");
+                elem.setAttribute("width", "100");
+                elem.setAttribute("alt", "Flower");
+                document.getElementById("placehere").appendChild(elem);
+
+
+            }
+
+
+        }
+
+        function imageIsLoaded(e) {
+            $('#myImg').attr('src', e.target.result);
+
+            images.push(e.target.result);
+
+
+            createImages();
+
+            //todo ::  using socket emit this as image_upload(data) etc and see if we can use it back
+            //to get images (.src) from the array at server  
+            console.log(e.target.result);
+        }
+        
+    </script>
+
+    <body>
+
+
+        <input type='file' />
+
+        <img hidden id="myImg" src="#" alt="your image" />
+
+        <div id="placehere">
+
+        </div>
+
+    </body>
+
+    </html>

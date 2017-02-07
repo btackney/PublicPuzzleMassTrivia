@@ -1,0 +1,89 @@
+<doctype html>
+    <html lang="en" ng-app>
+
+    <head>
+        <title>MAINTENANCE-PUBICPUZZLE.COM</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta property="og:url" content="HTTP://publicpuzzle.com/" />
+        <meta property="og:type" content="Game" />
+        <meta property="og:title" content="Play with the public at publicpuzzle.com" />
+        <meta property="og:description" content="Real people, real time, real game." />
+        <meta property="og:image" content="http://publicpuzzle.com/img/pp.png" />
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <link rel="stylesheet" type="text/css" href="css/maintain.css">
+
+        <link rel="stylesheet" href="css/hint.css">
+
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div id="testme"></div>
+            <div id="maintenanceLogin">
+                <!--<form class="form" name="maintainLogin" onsubmit="login();" >-->
+                <p>
+                    <label>Username: <input class="form-control" type="text" name="username" id="username" value="kurtz"/></label>
+                    <label>Password: <input class="form-control" type="password" name="password" id="password" value="brendan"/></label>
+                    <input id="Login" type="submit" value="Login" />
+                </p>
+                <!--</form>-->
+            </div>
+
+
+            <div id="maintenanceForm" style="display:none;">
+
+                <h3>Maintenance</h3><label><div id="currentIndex"></div></label><br />
+
+                <textarea rows="3" cols="60" name="question" id="question" placeholder="Type/Copy Question Here" required></textarea><br />
+
+   
+                <label><input   type="text" name="imgURL" id="imgURL" placeholder='./img/3.png or http://lostwords.org/images/penguin.png' /></label><br/>
+                <label><input  class="form-control" style="ss:200;" type="text" placeholder="(Correct Answer Here)" name="choice1" id="choice1" required /></label><br />
+                <label><input class="form-control"  style="wssidth:200;" type="text" placeholder="Choice 2" name="choice2" id="choice2"/></label><br />
+                <label><input class="form-control" style="wissdth:200;"  type="text" placeholder="Choice 3" name="choice3" id="choice3"/></label><br />
+                <label><input class="form-control"  style="wsidth:200;" type="text" placeholder="Choice 4" name="choice4" id="choice4"/></label><br />
+
+                <label>Question Time: <input type="text" name="qTime" id="qTime" placeholder="" required/></label>
+                <BR />
+
+                <label><input  type="number" name="jumpNumber" id="jumpNumber" value=0 min="0" max="99" /><input id="jumpQ" type="submit" value="Jump" /></label>
+
+                <input id="prevQ" type="button" value="Previous" />
+                <input id="nextQ" type="button" value="Next" />&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="newQuestion" type="button" value="Save" />&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="deleteQuestion" type="button" value="DELETE" /><br />
+
+                <div id= showMyImage></div>
+                
+                <input HIDDEN id="readfile" type="button" value="readServerFile TODO" />
+                <input HIDDEN id="writefile" type="button" value="writeServerFile TODO" />
+
+                <div hidden id="showQuestions">Below are the questions by index array for reference</div>
+
+                <!--todo add a button to clear array and upload json files-->
+
+            </div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+        <script src="./socket.io/socket.io.js"></script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.11/pixi.min.js"></script>
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="./js/ion.sound.min.js"></script>
+
+        <script src="./js/maintain.js"></script>
+
+    </body>
+
+    </html>

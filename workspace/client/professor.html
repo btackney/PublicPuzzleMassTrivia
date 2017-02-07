@@ -1,0 +1,77 @@
+<doctype html>
+    <html lang="en" ng-app>
+
+    <head>
+        <title>NAVIGATION-PUBICPUZZLE</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta property="og:url" content="HTTP://publicpuzzle.com/" />
+        <meta property="og:type" content="Game" />
+        <meta property="og:title" content="Play with the public at publicpuzzle.com" />
+        <meta property="og:description" content="Real people, real time, real game." />
+        <meta property="og:image" content="http://publicpuzzle.com/img/pp.png" />
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <link rel="stylesheet" type="text/css" href="css/maintain.css">
+
+        <link rel="stylesheet" href="css/hint.css">
+
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div id="testme"></div>
+            <div id="maintenanceLogin">
+                <!--<form class="form" name="maintainLogin" onsubmit="login();" >-->
+                <p>
+                    <label>Username: <input class="form-control" type="text" name="username" id="username" value="kurtz"/></label>
+                    <label>Password: <input class="form-control" type="password" name="password" id="password" value="brendan"/></label>
+                    <input id="Login" type="submit" value="Login" />
+                </p>
+                <!--</form>-->
+            </div>
+
+
+            <div id="maintenanceForm" style="display:none;">
+                
+                <h3>PUBLICPUZZLE.COM</h3>
+                
+                <input class="btn" type="button" id="previousQuestion" value="Start"  />                
+                <input class="btn" type="button" id="pauseBroadcasts" value="Pause"  />             
+                <input class="btn" type="button" id="nextQuestion" value="Next" />
+                
+                <input class="btn" type="button" id="showStats" value="Stats"  />                   
+                
+                <input class="btn" type="button" id="showCorrectAnswer" value="Correct"  />                
+
+                <BR />
+                
+                <BR />
+                
+                <!--todo add a button to clear array and upload json files-->
+                
+            </div>
+        </div>
+
+        <iframe src="./index.html" width=100% height=75%></iframe>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+        <script src="./socket.io/socket.io.js"></script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.11/pixi.min.js"></script>
+
+        <!-- include external css for my bootstrap -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- include external js source files for bootstrap -->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="./js/professor.js"></script>
+
+    </body>
+
+    </html>
